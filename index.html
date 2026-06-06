@@ -1,132 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rafiantiq</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RafiantIQ — Your personal model, in your pocket</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@700;800&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+   .mono { font-family: 'JetBrains Mono', monospace; }
+   .grid-bg {
+        background-image:
+            linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
     }
-
-    body {
-      background: #0f172a;
-      color: #e2e8f0;
-      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-      line-height: 1.7;
-      padding: 2rem 1rem;
+   .card-glow {
+        box-shadow: 0 0 40px rgba(0, 212, 255, 0.15), 0 20px 60px rgba(0, 0, 0, 0.5);
     }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+   .decline-stamp {
+        border: 6px solid #FF2D55;
+        color: #FF2D55;
+        transform: rotate(-18deg);
+        text-shadow: 0 0 20px rgba(255, 45, 85, 0.6);
+        box-shadow: 0 0 30px rgba(255, 45, 85, 0.4);
     }
-
-    header {
-      text-align: center;
-      padding: 3rem 0;
-      border-bottom: 1px solid #1e293b;
-      margin-bottom: 3rem;
+   .pulse-glow {
+        animation: pulseGlow 2s ease-in-out infinite;
     }
-
-    h1 {
-      color: #38bdf8;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    @keyframes pulseGlow {
+        0%, 100% { text-shadow: 0 0 20px rgba(0, 212, 255, 0.8); }
+        50% { text-shadow: 0 0 30px rgba(0, 212, 255, 1); }
     }
-
-    .tagline {
-      color: #94a3b8;
-      font-size: 1.1rem;
-    }
-
-    h2 {
-      color: #38bdf8;
-      font-size: 1.75rem;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-      color: #cbd5e1;
-    }
-
-    a {
-      color: #4ade80;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #38bdf8;
-      color: #0f172a;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      font-weight: 600;
-      margin-top: 1rem;
-    }
-
-    .btn:hover {
-      background: #0ea5e9;
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #1e293b;
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-  </style>
+</style>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <h1>Rafiantiq</h1>
-      <p class="tagline">Your tagline goes here</p>
-    </header>
+<body class="bg-[#0A0F1C] text-white min-h-screen grid-bg">
 
-    <main>
-      <section>
-        <h2>Welcome</h2>
-        <p>
-          This is your Rafiantiq site. Replace this text with info about your project, 
-          business, or whatever you’re showcasing.
-        </p>
-        <p>
-          Edit this HTML file directly on GitHub to change the content. The CSS is 
-          included above in the &lt;style&gt; section.
-        </p>
-        <a href="#contact" class="btn">Contact Us</a>
-      </section>
-
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          Add details about Rafiantiq here. What do you do? What makes you different?
-        </p>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          Email: <a href="mailto:hello@rafiantiq.com">hello@rafiantiq.com</a>
-        </p>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2026 Rafiantiq. All rights reserved.</p>
-    </footer>
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-[#0A0F1C]/80 backdrop-blur-lg border-b border-[#1E293B]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#0099CC] flex items-center justify-center">
+        <i class="fa-solid fa-hexagon text-[#0A0F1C]"></i>
+      </div>
+      <span class="text-xl font-extrabold">Rafiant</span>
+    </div>
+    <a href="#waitlist" class="bg-white text-[#0A0F1C] font-bold py-2.5 px-5 rounded-xl hover:bg-gray-100 transition">Get Early Access</a>
   </div>
+</header>
+
+<!-- Hero -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-32">
+  <div class="max-w-3xl">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1E293B] border border-[#334155] mb-6">
+      <div class="w-2 h-2 rounded-full bg-[#00D4FF] pulse-glow"></div>
+      <span class="text-sm text-[#94A3B8]">Now learning from live decisions</span>
+    </div>
+    <h1 class="text-5xl sm:text-7xl font-black leading-tight mb-6">
+      Other apps use rules.<br>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#7C3AED]">Rafiant learns yours.</span>
+    </h1>
+    <p class="text-xl text-[#94A3B8] mb-8 max-w-2xl">
+      Rafiant IQ adapts to how you work. It remembers what worked, flags what didn't, and gets sharper with every offer you see.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href="#waitlist" class="bg-gradient-to-r from-[#00D4FF] to-[#0099CC] text-[#0A0F1C] font-bold py-4 px-8 rounded-xl text-lg shadow-lg shadow-[#00D4FF]/30">
+        Get Early Access →
+      </a>
+      <button class="border border-[#334155] text-white font-semibold py-4 px-8 rounded-xl hover:bg-[#1E293B] transition">
+        See how it learns
+      </button>
+    </div>
+    <div class="flex items-center gap-3 mt-8">
+      <div class="flex -space-x-2">
+        <img src="https://i.pravatar.cc/40?img=1" class="w-8 h-8 rounded-full border-2 border-[#0A0F1C]">
+        <img src="https://i.pravatar.cc/40?img=2" class="w-8 h-8 rounded-full border-2 border-[#0A0F1C]">
+        <img src="https://i.pravatar.cc/40?img=3" class="w-8 h-8 rounded-full border-2 border-[#0A0F1C]">
+      </div>
+      <span class="text-sm text-[#64748B]">Trusted by top 1% earners</span>
+    </div>
+  </div>
+</section>
+
+<!-- Rules vs Learning -->
+<section class="bg-[#060B14] py-20 px-4 sm:px-6 border-y border-[#1E293B]">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl sm:text-5xl font-black text-center mb-16">
+      Rules Are For Averages.<br>You Aren't Average.
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Static Rules -->
+      <div class="bg-[#0A0F1C] border border-[#1E293B] rounded-2xl p-8">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-2xl font-bold">Static Rules</h3>
+          <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#FF2D55]/10 text-[#FF2D55] border border-[#FF2D55]/20">Legacy</span>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3"><i class="fa-solid fa-xmark text-[#FF2D55] mt-1"></i><span>Same threshold for everyone</span></div>
+          <div class="flex items-start gap-3"><i class="fa-solid fa-xmark text-[#FF2D55] mt-1"></i><span>Never learns your preferences</span></div>
+          <div class="flex items-start gap-3"><i class="fa-solid fa-xmark text-[#FF2D55] mt-1"></i><span>Forgets yesterday's wins</span></div>
+          <div class="flex items-start gap-3"><i class="fa-solid fa-xmark text-[#FF2D55] mt-1"></i><span>Generic "good" or "bad"</span></div>
+        </div>
+      </div>
+      <!-- Adaptive Intelligence -->
+      <div class="bg-[#0A0F1C] border border-[#00D4FF]/30 rounded-2xl p-8 card-glow">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-2xl font-bold">Adaptive Intelligence</h3>
+          <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#00D4FF]/10 text-[#00D4FF] border border-[#00D4FF]/20">Rafiant IQ</span>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3"><i class="fa-solid fa-check text-[#00D4FF] mt-1"></i><span>Learns your personal thresholds</span></div>
+          <div class="flex items-start gap-3"><i class="fa-solid fa-check text-[#00D4FF] mt-1"></i><span>Adapts to time, area, mood</span></div>
+          <div class="flex items-start gap-3"><i class="fa-solid fa-check text-[#00D4FF] mt-1"></i><span>Compounds knowledge each day</span></div>
+          <div class="flex items-start gap-3"><i class="fa-solid fa-check text-[#00D4FF] mt-1"></i><span>Explains why it recommends</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 94% Confidence Gauge -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+  <div class="max-w-md mx-auto text-center">
+    <div class="relative w-64 h-64 mx-auto mb-8">
+      <svg class="w-full h-full transform -rotate-90">
+        <circle cx="128" cy="128" r="110" stroke="#1E293B" stroke-width="12" fill="none"/>
+        <circle cx="128" cy="128" r="110" stroke="url(#gradient)" stroke-width="12" fill="none"
+                stroke-dasharray="691" stroke-dashoffset="41" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00D4FF" />
+            <stop offset="100%" stop-color="#7C3AED" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <div class="text-6xl font-black mono">94%</div>
+        <div class="text-sm font-semibold text-[#64748B] uppercase tracking-wider">Confidence</div>
+        <div class="mt-2 px-3 py-1 rounded-full bg-[#00D4FF]/10 text-[#00D4FF] text-xs font-bold">
+          Learning your pattern
+        </div>
+      </div>
+    </div>
+    <p class="text-[#94A3B8]">Real-time adaptive scoring • Updates every decision</p>
+  </div>
+</section>
+
+<!-- Your Personal Model -->
+<section class="bg-[#060B14] py-20 px-4 sm:px-6 border-y border-[#1E293B]">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl sm:text-5xl font-black mb-4">Your personal model, in your pocket.</h2>
+    <p class="text-xl text-[#94A3B8] mb-12 max-w-3xl">Not a calculator. Not a checklist. A living intelligence that knows your 2pm retail pattern, your Friday night threshold, your airport preference.</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-[#0A0F1C] border border-[#1E293B] rounded-2xl p-6">
+        <i class="fa-solid fa-bolt text-[#00D4FF] text-2xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Confidence, not guesses</h3>
+        <p class="text-[#94A3B8]">92% confidence + why it matters to you</p>
+      </div>
+      <div class="bg-[#0A0F1C] border border-[#1E293B] rounded-2xl p-6">
+        <i class="fa-solid fa-brain text-[#00D4FF] text-2xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Explains every call</h3>
+        <p class="text-[#94A3B8]">"Matches your 2pm retail pattern"</p>
+      </div>
+      <div class="bg-[#0A0F1C] border border-[#1E293B] rounded-2xl p-6">
+        <i class="fa-solid fa-chart-line text-[#00D4FF] text-2xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Gets better daily</h3>
+        <p class="text-[#94A3B8]">Compounding personal intelligence</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Live Offer Demo -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+  <h2 class="text-3xl font-black text-center mb-12">See It In Action</h2>
+  <div class="max-w-sm mx-auto bg-[#0A0F1C] border border-[#1E293B] rounded-2xl p-6 card-glow">
+    <div class="flex items-center justify-between mb-4">
+      <span class="text-xs font-bold text-[#64748B] uppercase">NEW OFFER</span>
+      <span class="text-xs font-bold px-2 py-1 rounded bg-[#00D4FF] text-[#0A0F1C]">92%</span>
+    </div>
+    <h3 class="text-2xl font-bold mb-4">Target • Retail</h3>
+    <div class="grid grid-cols-3 gap-3 mb-4">
+      <div class="bg-[#060B14] rounded-lg p-3 text-center">
+        <div class="text-2xl font-black mono">$14.50</div>
+        <div class="text-[10px] text-[#64748B] uppercase">Payout</div>
+      </div>
+      <div class="bg-[#060B14] rounded-lg p-3 text-center">
+        <div class="text-2xl font-black mono">2.3<span class="text-sm">mi</span></div>
+        <div class="text-[10px] text-[#64748B] uppercase">Distance</div>
+      </div>
+      <div class="bg-[#060B14] rounded-lg p-3 text-center">
+        <div class="text-2xl font-black mono">8<span class="text-sm">min</span></div>
+        <div class="text-[10px] text-[#64748B] uppercase">Est</div>
+      </div>
+    <div class="bg-[#00D4FF]/10 border border-[#00D4FF]/20 rounded-lg p-3 mb-4">
+      <p class="text-sm text-[#00D4FF]">Matches your 2pm retail pattern • High tip probability</p>
+    </div>
+    <div class="flex gap-3">
+      <button class="flex-1 bg-white text-[#0A0F1C] font-bold py-3 rounded-xl">Accept</button>
+      <button class="flex-1 border border-[#334155] font-semibold py-3 rounded-xl">Skip</button>
+    </div>
+  </div>
+</section>
+
+<!-- IQ Card: Bad Order Showcase -->
+<section class="bg-[#060B14] py-20 px-4 sm:px-6 border-y border-[#1E293B]">
+  <div class="max-w-6xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-black mb-4">Stop Taking Bad Orders</h2>
+    <p class="text-xl text-[#94A3B8]">RafiantIQ scores every offer. Good ones get accepted. Bad ones become shareable proof.</p>
+  </div>
+  <div class="max-w-md mx-auto bg-[#0A0F1C] rounded-[2rem] card-glow overflow-hidden relative">
+    <div class="h-1.5 w-full bg-gradient-to-r from-[#00D4FF] via-[#00A3CC] to-[#00D4FF]"></div>
+    <div class="px-8 pt-8 pb-6 border-b border-[#1E293B] flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#0099CC] flex items-center justify-center">
+          <i class="fa-solid fa-bolt text-[#0A0F1C]"></i>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-xl">RafiantIQ</h3>
+          <p class="text-[#00D4FF] text-[10px] font-semibold tracking-widest uppercase">Order Intelligence</p>
+        </div>
+      <div class="text-right">
+        <div class="text-[#64748B] text-[10px] uppercase">Scanned</div>
+        <div class="text-[#94A3B8] text-xs mono">12:32 AM</div>
+      </div>
+    </div>
+    <div class="px-8 py-8 relative">
+      <div class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+        <div class="decline-stamp px-8 py-4 rounded-lg bg-[#0A0F1C]/80">
+          <span class="text-5xl font-black mono">DECLINE</span>
+        </div>
+      </div>
+      <div class="text-center mb-8 relative z-10">
+        <div class="text-[#64748B] text-xs font-semibold uppercase mb-2">IQ Score</div>
+        <div class="relative inline-block">
+          <div class="text-[#FF2D55] text-8xl font-black mono">12</div>
+          <div class="text-[#64748B] text-2xl font-bold mono absolute top-2 -right-12">/100</div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-6 relative z-10">
+        <div class="bg-[#060B14] rounded-2xl p-5 border border-[#1E293B]">
+          <div class="text-[#64748B] text-[10px] font-semibold uppercase mb-2">Order Pay</div>
+          <div class="text-4xl font-extrabold mono">$3.12</div>
+        </div>
+        <div class="bg-[#060B14] rounded-2xl p-5 border border-[#1E293B]">
+          <div class="text-[#64748B] text-[10px] font-semibold uppercase mb-2">Distance</div>
+          <div class="text-4xl font-extrabold mono">8.4<span class="text-xl text-[#64748B]">mi</span></div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2 relative z-10">
+        <div class="px-3 py-1.5 rounded-lg bg-[#FF2D55]/10 border border-[#FF2D55]/20 text-[#FF2D55] text-[10px] font-bold">NO TIP</div>
+        <div class="px-3 py-1.5 rounded-lg bg-[#FF2D55]/10 border border-[#FF2D55]/20 text-[#FF2D55] text-[10px] font-bold">HIGH MILEAGE</div>
+        <div class="px-3 py-1.5 rounded-lg bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#F59E0B] text-[10px] font-bold">LONG WAIT</div>
+      </div>
+    </div>
+    <div class="px-8 py-5 bg-[#060B14] border-t border-[#1E293B] text-center">
+      <span class="text-[#94A3B8] text-xs">Scored by RafiantIQ in Indianapolis, IN</span>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section id="waitlist" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 text-center">
+  <h2 class="text-4xl sm:text-5xl font-black mb-6">Built for learners, not followers.</h2>
+  <p class="text-xl text-[#94A3B8] mb-8 max-w-2xl mx-auto">
+    Join drivers who use their own data to earn more. RafiantIQ launches in Indianapolis first.
+  </p>
+  <form class="max-w-md mx-auto flex gap-3">
+    <input type="email" placeholder="your@email.com" class="flex-1 bg-[#1E293B] border border-[#334155] rounded-xl px-4 py-4 text-white placeholder-[#64748B] focus:outline-none focus:border-[#00D4FF]">
+    <button class="bg-gradient-to-r from-[#00D4FF] to-[#0099CC] text-[#0A0F1C] font-bold px-8 rounded-xl whitespace-nowrap">
+      Get Early Access
+    </button>
+  </form>
+  <p class="text-[#475569] text-sm mt-4">Every share drives waitlist signups in your city</p>
+</section>
+
+<footer class="border-t border-[#1E293B] py-8 text-center text-[#64748B] text-sm">
+  &copy; 2026 RafiantIQ. All rights reserved.
+</footer>
+
 </body>
 </html>
