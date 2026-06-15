@@ -1,35 +1,35 @@
-<!-- rafiant-mix.svg — paste entire file into static/logos/rafiant-mix.svg -->
+<!-- paste this entire file into static/logos/rafiant-mix.svg -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160" role="img" aria-label="Rafiant IQ logo">
   <defs>
-    <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#00CFFF"/>
       <stop offset="1" stop-color="#0066FF"/>
     </linearGradient>
     <style>
-      .bg { fill: none; }
-      .mark { fill: url(#grad); }
-      .mono { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; font-weight: 800; fill: #0b1220; }
-      .sub { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; font-weight: 700; fill: #0b1220; opacity: 0.9; }
+      .bg{fill:none}
+      .mark{fill:url(#g)}
+      .word{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;font-weight:700;fill:#0b1220}
+      .sub{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;font-weight:700;fill:#0b1220;opacity:0.9;font-size:28px}
     </style>
   </defs>
 
   <rect width="600" height="160" class="bg"/>
 
-  <!-- Symbol -->
+  <!-- compact monogram -->
   <g transform="translate(28,20)">
-    <rect x="0" y="0" width="120" height="120" rx="20" fill="#0b1220" opacity="0.06"/>
+    <rect x="0" y="0" width="120" height="120" rx="18" fill="#0b1220" opacity="0.06"/>
     <g transform="translate(12,12)">
-      <rect width="96" height="96" rx="16" class="mark"/>
-      <g transform="translate(20,18)" fill="#fff" font-family="Inter, sans-serif" font-weight="800">
-        <text x="0" y="44" font-size="44">R</text>
-        <text x="34" y="44" font-size="44" opacity="0.95">Q</text>
+      <rect width="96" height="96" rx="14" class="mark"/>
+      <g transform="translate(20,22)" fill="#fff" font-family="Inter, sans-serif" font-weight="800">
+        <text x="0" y="36" font-size="40">R</text>
+        <text x="34" y="36" font-size="40" opacity="0.95">Q</text>
       </g>
     </g>
   </g>
 
-  <!-- Wordmark -->
+  <!-- wordmark -->
   <g transform="translate(170,62)">
-    <text class="mono" x="0" y="0" font-size="48">Rafiant</text>
-    <text class="sub" x="0" y="44" font-size="28">IQ</text>
+    <text class="word" x="0" y="0" font-size="48">Rafiant</text>
+    <text class="sub" x="0" y="44">IQ</text>
   </g>
 </svg>
