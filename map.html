@@ -6,6 +6,10 @@
     <title>Rafiant IQ — Map</title>
 
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Leaflet Map Library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -23,43 +27,30 @@
         </div>
     </nav>
 
-    <!-- Map + Sidebar Layout -->
-    <div class="map-container">
+    <!-- Map Layout -->
+    <div class="map-layout">
 
-        <!-- Map Area -->
-        <div id="map" class="map-area">
-            <!-- You can integrate a real map later (Leaflet, Mapbox, Google Maps) -->
-            <div class="map-placeholder">
-                <p>Map Loading…</p>
-            </div>
-        </div>
+        <!-- Map Container -->
+        <div id="map" class="map-container"></div>
 
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <h2 id="zoneName">Zone Name</h2>
+        <div class="map-sidebar">
+            <h2>Zone IQ</h2>
 
-            <div class="sidebar-block">
-                <p><strong>Your Performance:</strong></p>
-                <p id="personalPerformance">—</p>
-            </div>
+            <p><strong>Zone:</strong> <span id="zoneName">—</span></p>
+            <p><strong>Performance:</strong> <span id="personalPerformance">—</span></p>
+            <p><strong>Profitability:</strong> <span id="zoneProfit">—</span></p>
+            <p><strong>Peak Times:</strong> <span id="zoneTimes">—</span></p>
 
-            <div class="sidebar-block">
-                <p><strong>Zone Profitability:</strong></p>
-                <p id="zoneProfit">—</p>
-            </div>
-
-            <div class="sidebar-block">
-                <p><strong>Best Times:</strong></p>
-                <p id="zoneTimes">—</p>
-            </div>
-        </aside>
+            <p class="sidebar-note">Tap any zone on the map to analyze it.</p>
+        </div>
 
     </div>
 
     <!-- Logic -->
     <script src="js/zoneiq.js"></script>
-    <script src="js/profile.js"></script>
+    <script src="js/map-engine.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>
-
