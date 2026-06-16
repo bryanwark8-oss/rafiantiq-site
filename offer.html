@@ -1,1 +1,73 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafiant IQ — Offer</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="static/logos/instamind-clean.svg" alt="Rafiant IQ Logo" />
+        </a>
+
+        <div class="nav-links">
+            <a href="map.html">Map</a>
+            <a href="offer.html" class="active">Offer</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <!-- Offer Renderer -->
+    <div class="offer-container">
+
+        <!-- SmartScore -->
+        <div class="smartscore-block">
+            <h1 id="smartScore" class="smartscore-value">—</h1>
+            <p class="smartscore-label">SmartScore</p>
+        </div>
+
+        <!-- True Profit Block -->
+        <div class="profit-block">
+            <h2>True Profit</h2>
+            <p id="trueProfit" class="profit-value">—</p>
+
+            <div class="profit-details">
+                <p><strong>Payout:</strong> <span id="payout">—</span></p>
+                <p><strong>Miles:</strong> <span id="miles">—</span></p>
+                <p><strong>Minutes:</strong> <span id="minutes">—</span></p>
+                <p><strong>Gas Cost:</strong> <span id="gasCost">—</span></p>
+                <p><strong>Profit/hr:</strong> <span id="profitPerHour">—</span></p>
+                <p><strong>Profit/mi:</strong> <span id="profitPerMile">—</span></p>
+            </div>
+        </div>
+
+        <!-- Recommendation -->
+        <div class="recommendation-block">
+            <h2 id="recommendation">Recommendation: —</h2>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions">
+            <button class="accept">ACCEPT</button>
+            <button class="skip">SKIP</button>
+        </div>
+
+    </div>
+
+    <!-- Logic -->
+    <script src="js/trueprofit.js"></script>
+    <script src="js/smartscore.js"></script>
+    <script src="js/zoneiq.js"></script>
+    <script src="js/restaurantiq.js"></script>
+    <script src="js/modeiq.js"></script>
+    <script src="js/profile.js"></script>
+
+</body>
+</html>
