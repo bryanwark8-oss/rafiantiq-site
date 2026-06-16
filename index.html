@@ -1,48 +1,72 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Rafiant IQ — True Profit</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafiant IQ — True Profit</title>
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="box">
 
-    <!-- Logo -->
-    <img src="static/logos/rafiant-mix.svg" class="logo">
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="static/logos/instamind-clean.svg" alt="Rafiant IQ Logo" />
+        </a>
 
-    <h1>Know your TRUE profit before you accept</h1>
-    <p>Lifetime tester spots available.</p>
+        <div class="nav-links">
+            <a href="map.html">Map</a>
+            <a href="offer.html">Offer</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
 
-    <!-- Standard button with your real Stripe link -->
-    <a class="btn" href="https://buy.stripe.com/28E28kdaL8YX2nFduT8Ra00" target="_blank">
-      Buy Standard $19.99
-    </a>
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Rafiant IQ</h1>
+        <p>The first driver intelligence system built for true profit.</p>
 
-    <!-- Pro button placeholder -->
-    <a class="btn primary" href="#" target="_blank">
-      Buy Pro $29.99
-    </a>
+        <a href="#features" class="cta-button">Explore Features</a>
+    </header>
 
     <!-- Features Section -->
-    <div class="features">
-      <h2>What You Get</h2>
+    <section id="features" class="features">
+        <div class="feature">
+            <h2>True Profit Engine</h2>
+            <p>See your real earnings after gas, time, and distance — not the fake payout apps show.</p>
+        </div>
 
-      <ul>
-        <li><strong>True Profit:</strong> Calculates your REAL earnings after mileage, time, and expenses.</li>
-        <li><strong>SmartScore:</strong> Rates every order before you accept.</li>
-        <li><strong>Hotspot Prediction:</strong> Shows where money is trending next.</li>
-        <li><strong>Multi‑App Support:</strong> DoorDash, Uber Eats, Grubhub, and more.</li>
-        <li><strong>Lifetime Access:</strong> Pay once, use forever.</li>
-      </ul>
-    </div>
+        <div class="feature">
+            <h2>SmartScore</h2>
+            <p>Instant accept/skip recommendations powered by your driving style and city patterns.</p>
+        </div>
 
-  </div>
+        <div class="feature">
+            <h2>Zone IQ</h2>
+            <p>Soft zones, live profitability, and personal performance — all updating as you move the map.</p>
+        </div>
+
+        <div class="feature">
+            <h2>Restaurant IQ</h2>
+            <p>Predict wait times, risk, and your personal history with every restaurant.</p>
+        </div>
+
+        <div class="feature">
+            <h2>Mode IQ</h2>
+            <p>Delivery, rideshare, grocery, packages — the system learns your strengths automatically.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Rafiant IQ. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
