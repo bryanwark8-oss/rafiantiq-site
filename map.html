@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Leaflet Map Library -->
+    <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
@@ -30,11 +30,11 @@
     <!-- Map Layout -->
     <div class="map-layout">
 
-        <!-- Map Container -->
-        <div id="map" class="map-container"></div>
+        <!-- Map -->
+        <div id="map"></div>
 
         <!-- Sidebar -->
-        <div class="map-sidebar">
+        <div class="map-sidebar card">
             <h2>Zone IQ</h2>
 
             <p><strong>Zone:</strong> <span id="zoneName">—</span></p>
@@ -42,7 +42,7 @@
             <p><strong>Profitability:</strong> <span id="zoneProfit">—</span></p>
             <p><strong>Peak Times:</strong> <span id="zoneTimes">—</span></p>
 
-            <p class="sidebar-note">Tap any zone on the map to analyze it.</p>
+            <p style="margin-top:20px; color:#888;">Tap any zone on the map to analyze it.</p>
         </div>
 
     </div>
