@@ -1,35 +1,28 @@
-<!-- paste this entire file into static/logos/rafiant-mix.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160" role="img" aria-label="Rafiant IQ logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="760" height="186" role="img" aria-label="Rafiant IQ logo">
   <defs>
-    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#00CFFF"/>
-      <stop offset="1" stop-color="#0066FF"/>
+    <linearGradient id="mixGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#096CA7"/>
+      <stop offset="0.28" stop-color="#00CFFF"/>
+      <stop offset="0.58" stop-color="#FF8C00"/>
+      <stop offset="0.75" stop-color="#FFD700"/>
+      <stop offset="1" stop-color="#00FF7F"/>
     </linearGradient>
-    <style>
-      .bg{fill:none}
-      .mark{fill:url(#g)}
-      .word{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;font-weight:700;fill:#0b1220}
-      .sub{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;font-weight:700;fill:#0b1220;opacity:0.9;font-size:28px}
-    </style>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
   </defs>
 
-  <rect width="600" height="160" class="bg"/>
-
-  <!-- compact monogram -->
-  <g transform="translate(28,20)">
-    <rect x="0" y="0" width="120" height="120" rx="18" fill="#0b1220" opacity="0.06"/>
-    <g transform="translate(12,12)">
-      <rect width="96" height="96" rx="14" class="mark"/>
-      <g transform="translate(20,22)" fill="#fff" font-family="Inter, sans-serif" font-weight="800">
-        <text x="0" y="36" font-size="40">R</text>
-        <text x="34" y="36" font-size="40" opacity="0.95">Q</text>
-      </g>
-    </g>
+  <!-- mark -->
+  <g transform="translate(90,110)">
+    <circle r="64" fill="none" stroke="url(#mixGrad)" stroke-width="14" stroke-linecap="round" filter="url(#softShadow)"/>
+    <path d="M-12,-34 L22,-8 L8,-8 L34,34 L-8,4 L8,4 Z" fill="url(#mixGrad)" transform="scale(1.8) translate(0,8) rotate(6)"/>
   </g>
 
-  <!-- wordmark -->
-  <g transform="translate(170,62)">
-    <text class="word" x="0" y="0" font-size="48">Rafiant</text>
-    <text class="sub" x="0" y="44">IQ</text>
+  <!-- pill behind text -->
+  <g transform="translate(220,110)">
+    <rect x="-8" y="-44" width="520" height="84" rx="18" fill="rgba(255,255,255,0.95)"/>
+    <text x="18" y="-6" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="56" fill="url(#mixGrad)">Rafiant</text>
+    <text x="380" y="-6" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="56" fill="#000">IQ</text>
+    <text x="18" y="34" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="14" fill="rgba(0,0,0,0.65)">Know your TRUE profit before you accept.</text>
   </g>
 </svg>
