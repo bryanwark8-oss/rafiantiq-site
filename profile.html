@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafiant IQ — Profile</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="static/logos/instamind-clean.svg" alt="Rafiant IQ Logo" />
+        </a>
+
+        <div class="nav-links">
+            <a href="map.html">Map</a>
+            <a href="offer.html">Offer</a>
+            <a href="profile.html" class="active">Profile</a>
+        </div>
+    </nav>
+
+    <!-- Profile Container -->
+    <div class="profile-container">
+
+        <h1>Your Driver Profile</h1>
+
+        <!-- SmartScore Trend -->
+        <section class="profile-section">
+            <h2>SmartScore Trend</h2>
+            <canvas id="scoreChart"></canvas>
+        </section>
+
+        <!-- Zone Strengths -->
+        <section class="profile-section">
+            <h2>Zone Strengths</h2>
+            <div id="zoneList" class="list-block">
+                <!-- JS will populate -->
+            </div>
+        </section>
+
+        <!-- Mode Strengths -->
+        <section class="profile-section">
+            <h2>Mode Strengths</h2>
+            <div id="modeList" class="list-block">
+                <!-- JS will populate -->
+            </div>
+        </section>
+
+        <!-- Restaurant IQ -->
+        <section class="profile-section">
+            <h2>Restaurant IQ</h2>
+            <div id="restaurantList" class="list-block">
+                <!-- JS will populate -->
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Logic -->
+    <script src="js/profile.js"></script>
+
+</body>
+</html>
 
