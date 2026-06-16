@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafiant IQ — Map</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="static/logos/instamind-clean.svg" alt="Rafiant IQ Logo" />
+        </a>
+
+        <div class="nav-links">
+            <a href="map.html" class="active">Map</a>
+            <a href="offer.html">Offer</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <!-- Map + Sidebar Layout -->
+    <div class="map-container">
+
+        <!-- Map Area -->
+        <div id="map" class="map-area">
+            <!-- You can integrate a real map later (Leaflet, Mapbox, Google Maps) -->
+            <div class="map-placeholder">
+                <p>Map Loading…</p>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 id="zoneName">Zone Name</h2>
+
+            <div class="sidebar-block">
+                <p><strong>Your Performance:</strong></p>
+                <p id="personalPerformance">—</p>
+            </div>
+
+            <div class="sidebar-block">
+                <p><strong>Zone Profitability:</strong></p>
+                <p id="zoneProfit">—</p>
+            </div>
+
+            <div class="sidebar-block">
+                <p><strong>Best Times:</strong></p>
+                <p id="zoneTimes">—</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Logic -->
+    <script src="js/zoneiq.js"></script>
+    <script src="js/profile.js"></script>
+
+</body>
+</html>
 
