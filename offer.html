@@ -23,29 +23,17 @@
         </div>
     </nav>
 
-    <!-- Offer Renderer -->
+    <!-- Offer Container -->
     <div class="offer-container">
 
-        <!-- Top row: SmartScore + New Offer -->
-        <div class="offer-header-row">
-            <div class="smartscore-block">
-                <h1 id="smartScore" class="smartscore-value">—</h1>
-                <p class="smartscore-label">SmartScore</p>
-            </div>
-
-            <div class="offer-meta">
-                <p><strong>Restaurant:</strong> <span id="offerRestaurant">—</span></p>
-                <p><strong>Zone:</strong> <span id="offerZone">—</span></p>
-                <p><strong>Mode:</strong> <span id="offerMode">—</span></p>
-            </div>
-
-            <div class="offer-actions-top">
-                <button id="newOfferBtn" class="secondary-btn">NEW OFFER</button>
-            </div>
+        <!-- SmartScore -->
+        <div class="card smartscore-block">
+            <h1 id="smartScore" class="smartscore-value">—</h1>
+            <p class="smartscore-label">SmartScore</p>
         </div>
 
-        <!-- True Profit Block -->
-        <div class="profit-block">
+        <!-- True Profit -->
+        <div class="card profit-block">
             <h2>True Profit</h2>
             <p id="trueProfit" class="profit-value">—</p>
 
@@ -60,7 +48,7 @@
         </div>
 
         <!-- Recommendation -->
-        <div class="recommendation-block">
+        <div class="card recommendation-block">
             <h2 id="recommendation">Recommendation: —</h2>
         </div>
 
@@ -70,9 +58,14 @@
             <button class="skip">SKIP</button>
         </div>
 
+        <!-- New Offer Button -->
+        <div style="text-align:center; margin-top:20px;">
+            <button id="newOfferBtn" class="secondary-btn">NEW OFFER</button>
+        </div>
+
     </div>
 
-    <!-- Logic (order matters) -->
+    <!-- Logic -->
     <script src="js/offer-sim.js"></script>
     <script src="js/trueprofit.js"></script>
     <script src="js/smartscore.js"></script>
@@ -84,16 +77,11 @@
     <script src="js/app.js"></script>
 
     <script>
-        // Wire up NEW OFFER button to re-run the whole flow
         document.addEventListener("DOMContentLoaded", () => {
             const btn = document.getElementById("newOfferBtn");
-            if (!btn) return;
-
-            btn.addEventListener("click", () => {
-                if (typeof initOfferPage === "function") {
-                    initOfferPage();
-                }
-            });
+            if (btn && typeof initOfferPage === "function") {
+                btn.addEventListener("click", initOfferPage);
+            }
         });
     </script>
 
