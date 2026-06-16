@@ -1,37 +1,23 @@
-body {
-  background: #0b0b0b;
-  color: white;
-  font-family: Arial;
-  text-align: center;
-  padding: 40px;
-}
-
-.box {
-  background: #111;
-  padding: 30px;
+.features {
+  margin-top: 40px;
+  text-align: left;
+  background: #181818;
+  padding: 20px;
   border-radius: 12px;
-  max-width: 600px;
-  margin: auto;
 }
 
-.logo {
-  width: 300px;
+.features h2 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  margin: 10px;
-  border-radius: 10px;
-  border: 1px solid #444;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
+.features ul {
+  list-style: none;
+  padding: 0;
 }
 
-.primary {
-  background: #00CFFF;
-  color: black;
-  border: none;
+.features li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.4;
 }
